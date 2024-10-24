@@ -32,3 +32,38 @@ input, select {
     border-radius: 4px;
     font-size: 16px;
 }
+
+ /*style for the preloader*/
+ .preloader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Animation for the spinner*/
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+/*Hide content until the page is fully loaded*/
+body.loading .content {
+    display: none;
+}
+
+/*show the content after loading*/
+body.loading .preloader {
+    display: block;
+}
+
+.content {
+    display: none;
+}
+/*------------------End of preloader design------------------------*/
